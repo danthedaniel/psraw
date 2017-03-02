@@ -10,10 +10,10 @@ except ImportError:
 def sort_type(value):
     directions = ['asc', 'desc']
 
-    if value in self.directions:
+    if value in directions:
         return value
     else:
-        raise ValueError('Value must be one of: {}'.format(this.directions))
+        raise ValueError('Value must be one of: {}'.format(directions))
 
 
 base_address = 'https://apiv2.pushshift.io/reddit'
@@ -29,12 +29,44 @@ endpoints = {
         },
         'return_type': praw.models.Comment,
         'url': '/search/comment/'
+    },
+    'comment_fetch': {
+        'params': {
+            'author': str,
+            'after': int,
+            'before': int,
+            'limit': int,
+            'subreddit': str,
+            'sort': sort_type
+        },
+        'return_type': praw.models.Comment,
+        'url': '/comment/fetch/'
+    },
+    'submission_search': {
+        'params': {
+            'q': str,
+            'subreddit': str,
+            'limit': int,
+            'sort': sort_type,
+            'after': int
+        },
+        'return_type': praw.models.Submission,
+        'url': '/search/submission/'
+    },
+    'submission_activity': {
+        'params': {
+            'limit': int,
+            'before': int,
+            'after': int
+        },
+        'return_type': praw.models.Submission,
+        'url': '/submission/activity/'
     }
 }
 
 
-for name, config in list(endpoints.items()):
-    def req_endpoint(r, **kwargs):
+def create_endpoint_function(name, config):
+    def endpoint_func(r, **kwargs):
         coerced_kwargs = {}
 
         for key, value in list(kwargs.items()):
@@ -46,13 +78,15 @@ for name, config in list(endpoints.items()):
                     format(key, name)
                 )
 
-        if len(coerced_kwargs) > 0:
-            query_params = urlencode(coerced_kwargs)
-        else:
-            query_params = ''
-
+        query_params = '?{}'.format(urlencode(coerced_kwargs))
         resp = requests.get('{}{}{}'.format(base_address, config['url'], query_params))
         return [config['return_type'](r, _data=x) for x in resp.json()['data']]
 
-    req_endpoint.__name__ = name
-    globals()[name] = req_endpoint
+    endpoint_func.__name__ = name
+    return endpoint_func
+
+
+for name, config in list(endpoints.items()):
+    print('Creating func: {}'.format(name))
+    globals()[name] = create_endpoint_function(name, config)
+
