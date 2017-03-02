@@ -31,7 +31,7 @@ results = psraw.comment_search(r, q='teaearlgraycold', limit=30)
 
 [Official Documentation](https://docs.google.com/document/d/171VdjT-QKJi6ul9xYJ4kmiHeC7t_3G31Ce8eozKp3VQ/edit)
 
-In the example function signatures before, `r` is a `praw.Reddit` session object. 
+In the example function signatures below, `r` is a `praw.Reddit` session object. 
 **All other arguments must be passed as keyword arguments.**
 
 Each function will return either a list of `praw.models.Comment` objects or
