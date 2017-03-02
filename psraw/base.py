@@ -87,6 +87,4 @@ def create_endpoint_function(name, config):
 
 
 for name, config in list(endpoints.items()):
-    print('Creating func: {}'.format(name))
     globals()[name] = create_endpoint_function(name, config)
-
