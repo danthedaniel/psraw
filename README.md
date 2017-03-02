@@ -18,20 +18,29 @@ pip install psraw
 
 ### Usage
 
+Each function in the library is a generator. This allows you to set an extremely
+high limit parameter without the need to call the functions multiple times. To
+get a normal Python list, just wrap the function with the `list()` constructor.
+
 ```python
 import psraw
 import praw
 
 r = praw.Reddit(...)
 
-results = psraw.comment_search(r, q='teaearlgraycold', limit=30)
+# Get a list from the API
+results = list(psraw.comment_search(r, q='teaearlgraycold', limit=30))
+
+# Or use the function as a generator
+for comment in psraw.comment_search(r, q='teaearlgraycold', limit=3000):
+    # Do something with the comment
 ```
 
 ### Available functions
 
 [Official Documentation](https://docs.google.com/document/d/171VdjT-QKJi6ul9xYJ4kmiHeC7t_3G31Ce8eozKp3VQ/edit)
 
-In the example function signatures below, `r` is a `praw.Reddit` session object. 
+In the example function signatures below, `r` is a `praw.Reddit` session object.
 **All other arguments must be passed as keyword arguments.**
 
 Each function will return either a list of `praw.models.Comment` objects or
@@ -46,7 +55,7 @@ psraw.comment_fetch(r, author='', subreddit='', limit=0, sort='asc', after=0, be
 ```
 
 ```python
-psraw.submission_search(r, q='', subreddit='', limit=0, sort='asc', after=0)
+psraw.submission_search(r, q='', subreddit='', limit=0, sort='asc', after=0, before=0)
 ```
 
 ```python
