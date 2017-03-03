@@ -14,6 +14,9 @@ def limit_chunk(limit, limit_max):
     :param limit: The total number of items requested
     :param limit_max: The maximum number of items that can be requested at once
     """
+    if limit_max < 1:
+        raise ValueError('limit_max must be > 0')
+
     limits = []
     x = 0
 
@@ -59,6 +62,8 @@ def create_endpoint_function(name, config):
         if coerced_kwargs.get('sort', None) == 'asc':
             direction = 'after'
 
+        # Loop over the API request, since multiple may be required if the
+        # specified limit is greater than LIMIT_MAX
         for limit in limit_chunk(coerced_kwargs['limit'], LIMIT_MAX):
             coerced_kwargs['limit'] = limit
             url = '{}{}?{}'.format(BASE_ADDRESS, config['url'], urlencode(coerced_kwargs))
@@ -70,6 +75,8 @@ def create_endpoint_function(name, config):
             if len(data) < limit:
                 raise StopIteration
 
+            # On subsequent requests, specify that we only want results from
+            # before or after the last item we were sent
             coerced_kwargs[direction] = data[-1]['created_utc']
 
     endpoint_func.__name__ = name

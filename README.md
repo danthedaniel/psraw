@@ -1,7 +1,7 @@
 PSRAW
 ===
 
-[![PyPI version](https://badge.fury.io/py/psraw.svg)](https://badge.fury.io/py/psraw)
+[![PyPI version](https://badge.fury.io/py/psraw.svg)](https://badge.fury.io/py/psraw) [![Coverage Status](https://coveralls.io/repos/github/teaearlgraycold/psraw/badge.svg?branch=master)](https://coveralls.io/github/teaearlgraycold/psraw?branch=master) [![Build Status](https://travis-ci.org/teaearlgraycold/psraw.svg?branch=master)](https://travis-ci.org/teaearlgraycold/psraw) [![Code Health](https://landscape.io/github/teaearlgraycold/psraw/master/landscape.svg?style=flat)](https://landscape.io/github/teaearlgraycold/psraw/master)
 
 pushshift reddit API wrapper
 
