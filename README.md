@@ -61,3 +61,6 @@ psraw.submission_search(r, q='', subreddit='', limit=0, sort='asc', after=0, bef
 ```python
 psraw.submission_activity(r, limit=0, after=0, before=0)
 ```
+
+**Take note that the `submission_activity` endpoint is prone to slow processing
+times and high failure rates.**

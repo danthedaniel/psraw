@@ -1,0 +1,73 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.13.0]
+    method: GET
+    uri: https://apiv2.pushshift.io/reddit/search/comment/?limit=10&q=automoderator
+  response:
+    body:
+      string: !!binary |
+        H4sIAJj9uVgAA+1bC3MSyRr9K32xshpCeASSkGxZFt6Qlboa3SS7lhWs2WamgZZheuzuCVCW//2e
+        r2cgEDDZjXqLq7i6Zqa/7v6e5/Rj/JQLuOW546tPOZ7YvtK541wjseqVCoTmFs+FrMHrhlxqzzfG
+        80NuDASHKtjtKHtbxIqxRWtHiJh1lIqLTCuIMaOSKDBFiHdUMIHEW8G69I7ZvmBxX3MjWDvX1Frp
+        do7JiE1UolmsjGVW2lAU2XOIBExF6CFNgY3EYy1YLxHGyKg3Jz6Uvb5lHcE4s8LvM5PEsdKWfYSo
+        lSoqslYX+hRYHAqa1e8Lf8BUYhkNcfVWDiT7hQ/jX9lp4/f3T/rWxua4XWqX9JmMrIgCdTGS1u8X
+        fTVsl0YQf6ZF9yncoIZTz20zq5gRgsluqtl0ctbnhvFQCx5MoKOIGI/MSGgRFNmTt9L2WSRGML+r
+        9JC7DpiF7INHAi7DiTP8WqR9kxgRdK0W1obwsxa+iGw4+dc2WYmpWaCix9bpsqBIgXWFCFlXowG6
+        Os/J1AVo9wcSvr46oRnZ71PdL/uk970umU6xOxQ9bl2fFR4qMKUZNwOyzDn+RBpf6QCq6muh52cJ
+        0pZir9cuGTfRdpHl85mBfQ53kN3yWgQuOdgQScF7goYWlFEwFpOJMaIaCkohzmjMBKmDB7J9lg3T
+        rpSWM2VNMZ9vR/RfvsX4EN2R0wWELpuP+84/I8Q2FppiB02cuQiPz8NwUmRv0vGvfBVZyN+agKlu
+        OpRJOkiGQNr3T9qlTJl2CX6FlvjhmVVP4fZ2adHx21mipc7g0WQWZ0Nuxpy+0BHMQAH6CIgVgZdY
+        P3dcqdXr+/XqUb1WyMkAdRmIPg/2x5ALZTTw3Dtb9fbHQXId4m3Eh4JeVbwbyZhrJN2y7DSRcsdW
+        JwLPU9sgt6h/bq4xG2ffq/Zrhx8XWmhyL0YuyTGNmlvyw4K0ncSkapx0QumjJdEhHu9Kq9znwgOw
+        MErCcCUMpg0Z4OXzb142GxdNdt5snLDLF60L9qp5cdH4rclaZ6x1ecGaZ5et8+blO/a8efr6vMku
+        G/9pnf3GGv++bL0+yzLwhaTE0aIwB3gEKQ4OtBgqqgFKdhWJNKcIZ8NQjQgmEHmDlDhmLpXZ1XmC
+        cqgez9faaDQqpv5LixkubpjBuXuTol27JKNAjB/Rz96uxhBedXebQSrtx5DFToNYRLsIDRSaK7ZZ
+        XhYzgCIwIzOoYm5g0va5RdomYeCQPMNINiKE/JDA6IlwmR0BxzFlJERgCMfEOEawQRgThy2kx1CB
+        J+Y0COVAUCM5pJ17i4keG+cngzBPQD7oQ+8n9MMIf0XKPsNr1giJNW4KyynDGdEP3IhUAgjZTNdC
+        ZgGPSH8tjOAaRBMwERoxogjS6LFW1zIgpgrlUJILkJGxcGrPafwExrZLZOpJowmkQjwNE9YvbjNU
+        HunHeIyxYi1R2UW2EN5KFt6HR7eC6L4DtgzJ7y7jOPOBZtoBYCCd2bPIycg5MyNt0qS1DE1aigVg
+        msHvAindxkpzhyW3oZKAcmvvVOPPzELH6sCHD1D46Tvy6ZnaORchweHOGxiGh2spRvjLmePks4Gf
+        vprskO07APmdrNAKOwuUtmO4DHbI6TuVHTxWCzuZVdoNu1XlW+Vgq5z9n0zZqjagIH7fHRi8GgJh
+        oTBhq4aVsuvBp961NAA6o4YC9e4hHB5cNfHI1R73AtXzKA09iZ6gzMs+jwYUi+KakdnM1K/msVp9
+        jsf8em0Vj2mxxGOp5Aoec7I3PNblKN9FIpvpvpLD9j72K/I+Dls9xJfp6/+uALb2yutQAht639D7
+        ht439L7e9K5iBMl4RBV0CBB6VnnwfRh65D2P8hvANpCBB1ir1H8WZt87mGP2TnS9itlVvMTsqeQK
+        ZneyG2ZfN2b/x9m/IfUNqW9IfUPq603qPb9dCpTbsIA/ibZoS+KpAeFboCU2K33Z63sq8oZcyw8J
+        j/hPwuz12tEcsx+tZvaev8TsR19idie7YfZ1Y/aHlcD3pPcXAiTL2qWkXXqtB6pSq9QK7YigeFZ1
+        DtYdbSMEQ+mwvcD6aiSuhSYWWyLyjvB5gjqbb1uoRBYIK/RQRnRbpYhqkD3cUdsi8zt3EtcowwjU
+        j6n+f+nZX1k+72hiP59nu+xMsVaUIfpL+NWQ2KVKy/FmxcF9X8TIGbAcB5nSfedfLldCaexfDkpQ
+        uxSZXsqDqSImvRW004XJH+cvnSzokRxCl4bFOcJwkU2BRBq6eMwoNsWqGbXPX3CioV1yd4EGmnCg
+        xYxZrnyU0YAR9d6z3kndNKXDhQxvl7Ck9Ku7lW2naJ5+rRmWptp/LZAe1ucPP+tVuQpIj/aWgDSV
+        XAGkTvZOIE0V/yKKivtQdEX/+27tHhj8/xGOWBWrQMUB4ltwdXgXkBTZH1QHNokQSwADqomybgWS
+        UFqy0JWWYqfcFx2lBsWs0LGKtFT8kNXmMR7lNfcnBSdv5jvcrDypstOPKeYcWLwPOLL0xAK5wLpY
+        clJWZiiA1aWKJ1OQcOO5e3bMhuplI9ExWCun63isSy+TjltM/ymHELyFJ67ei+zqglaUVEYxXciv
+        wo6vBYXDFBIendEmhKxM9whAP6MI4F3r6d8FrW+IVoc/PFbV5o9zDstHq7Cq9nEJq1LJFVjlZH8E
+        rDrcHGhsDjQ2BxqbA421PtCwYwSpA/W8EZ/QBg5zuAvXD6qTXrj2sKEzbrfHvZ5SwU9ymnFQ358j
+        tv1+dQWxwXlLxJZKLhNbKrs5zViz04yH5P/DiP07fWlNlEPA/e0+tt58X735vvr+76sXvBKoUXSN
+        zauDftmL3C7LZqvMteGGb/upda08t/M5mhz1VxFErXabIDLJFQThZO8kiJ/uW+u5A5mLOEx8bvaq
+        +/cex6zNuW5leq77RoUSo7sT3UePsHnLEBW5hu4pBGfwZFU6btaFh3/SBFkptboFdoV8zbZfKRXQ
+        1FTBXXjuH51XUEeTrs3Tpbm360XKizNlt922EPaHEs5MtyBQMFBYbeexTcjTPgHugsYuAG5w6Del
+        i292iFL54U98q4eVOSwZB6NVWFK2S1iSSq7AEif7I5yiVL7rge/mGGVzjLI5Rtkco3z1NtKMP84u
+        xTPC9GREX7ADp7G291B3PLSTn+TwpFqb57NRuOqfIcJlS3yWSi7zWSq7OTxZs8OTv5/1uc/vC7mh
+        sDz9l+qfcmIs/IQSyrOSMqBcLB8gZ8iyHpDZIzya3LRV64WcTp2RxvT0pFndP6nUdsvlg6PdSqV5
+        uPt8D48HR3vVxuHJYe2ofpCjPiYJLdYDlTJiGvdlNL49dLn6+fN/AXmkWyVCPwAA
+    headers:
+      Access-Control-Allow-Origin: ['*']
+      CF-Cache-Status: [EXPIRED]
+      CF-RAY: [33a0689b8f360785-EWR]
+      Cache-Control: ['s-maxage=5, max-age=5']
+      Connection: [keep-alive]
+      Content-Encoding: [gzip]
+      Content-Length: ['2499']
+      Content-Type: [application/json;charset=UTF-8]
+      Date: ['Fri, 03 Mar 2017 23:34:48 GMT']
+      Server: [cloudflare-nginx]
+      Set-Cookie: ['__cfduid=dd4e35ed28c2b5e2e6061ab34c24c5f121488584088; expires=Sat,
+          03-Mar-18 23:34:48 GMT; path=/; domain=.pushshift.io; HttpOnly']
+      Vary: [Accept-Encoding]
+    status: {code: 200, message: OK}
+version: 1

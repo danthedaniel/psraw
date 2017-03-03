@@ -4,6 +4,7 @@ set -e
 
 pip install praw
 pip install nose
+pip install vcrpy
 pip install coverage coveralls
 
 python --version

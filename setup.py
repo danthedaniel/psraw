@@ -31,6 +31,7 @@ setup(
     ],
     tests_require=[
         'nose',
+        'vcrpy'
     ],
     test_suite='nose.collector',
     zip_safe=False
