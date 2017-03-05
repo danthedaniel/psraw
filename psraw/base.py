@@ -1,5 +1,4 @@
 import requests
-import praw
 try:
     from urllib import urlencode
 except ImportError:
