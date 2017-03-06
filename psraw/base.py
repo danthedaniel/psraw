@@ -33,8 +33,9 @@ def coerce_kwarg_types(kwargs, param_types):
     :param param_types: The dict of all valid parameters and their types (taken
         from the 'param' key of the endpoint config)
     """
+    params = list(kwargs.items())
     try:
-        return {key: param_types[key](value) for key, value in list(kwargs.items())}
+        return {key: param_types[key](value) for key, value in params}
     except KeyError as e:
         raise ValueError('{} parameter is not accepted'.format(e.args[0]))
 
@@ -65,7 +66,8 @@ def create_endpoint_function(name, config):
         # specified limit is greater than LIMIT_MAX
         for limit in limit_chunk(coerced_kwargs['limit'], LIMIT_MAX):
             coerced_kwargs['limit'] = limit
-            url = '{}{}?{}'.format(BASE_ADDRESS, config['url'], urlencode(coerced_kwargs))
+            query_params = urlencode(coerced_kwargs)
+            url = '{}{}?{}'.format(BASE_ADDRESS, config['url'], query_params)
             data = requests.get(url).json()['data']
 
             for item in data:

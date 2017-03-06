@@ -1,6 +1,7 @@
+from nose.tools import assert_raises
 import praw
 from psraw.base import limit_chunk, coerce_kwarg_types
-from psraw.endpoints import ENDPOINTS, sort_type
+from psraw.endpoints import sort_type
 
 
 test_config = {
@@ -21,11 +22,7 @@ def test_limit_chunk_1():
 
 def test_limit_chunk_2():
     """limit_chunk raises a ValueError when given a limit_max < 1"""
-    try:
-        limit_chunk(100, 0)
-        assert False
-    except ValueError:
-        pass
+    assert_raises(TypeError, limit_chunk, 100, 0)
 
 
 def test_limit_chunk_3():
@@ -35,13 +32,9 @@ def test_limit_chunk_3():
 
 
 def test_coerce_kwarg_types_1():
-    """coerce_kwarg_types raises a ValueError when passed an unspecified argument"""
-    try:
-        kwargs = {'foobar': 24}
-        coerced_kwargs = coerce_kwarg_types(kwargs, test_config['params'])
-        assert False
-    except ValueError:
-        pass
+    """coerce_kwarg_types raises a ValueError when passed an unspecd argument"""
+    kwargs = {'foobar': 24}
+    assert_raises(ValueError, coerce_kwarg_types, kwargs, test_config['params'])
 
 
 def test_coerce_kwarg_types_2():
@@ -62,8 +55,4 @@ def test_sort_type_1():
 
 def test_sort_type_2():
     """sort_type raises a ValueError if the value passed in is not a direction"""
-    try:
-        sort_type('foobar')
-        assert False
-    except ValueError:
-        pass
+    assert_raises(ValueError, sort_type, 'foobar')

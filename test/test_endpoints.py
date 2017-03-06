@@ -3,7 +3,7 @@ import psraw
 import vcr
 import os
 import types
-from psraw.endpoints import LIMIT_MAX, ENDPOINTS, sort_type
+from psraw.endpoints import LIMIT_MAX, ENDPOINTS
 
 
 LIMIT = 10
