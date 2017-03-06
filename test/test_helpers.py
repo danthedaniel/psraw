@@ -22,7 +22,7 @@ def test_limit_chunk_1():
 
 def test_limit_chunk_2():
     """limit_chunk raises a ValueError when given a limit_max < 1"""
-    assert_raises(TypeError, limit_chunk, 100, 0)
+    assert_raises(ValueError, limit_chunk, 100, 0)
 
 
 def test_limit_chunk_3():
