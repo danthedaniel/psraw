@@ -3,7 +3,7 @@ try:
     from urllib import urlencode
 except ImportError:
     from urllib.parse import urlencode
-from .endpoints import ENDPOINTS, BASE_ADDRESS, LIMIT_MAX, LIMIT_DEFAULT
+from .endpoints import ENDPOINTS, BASE_ADDRESS, LIMIT_DEFAULT
 
 
 def limit_chunk(limit, limit_max):
@@ -63,8 +63,8 @@ def create_endpoint_function(name, config):
             direction = 'after'
 
         # Loop over the API request, since multiple may be required if the
-        # specified limit is greater than LIMIT_MAX
-        for limit in limit_chunk(coerced_kwargs['limit'], LIMIT_MAX):
+        # specified limit is greater than config['limit']
+        for limit in limit_chunk(coerced_kwargs['limit'], config['limit']):
             coerced_kwargs['limit'] = limit
             query_params = urlencode(coerced_kwargs)
             url = '{}{}?{}'.format(BASE_ADDRESS, config['url'], query_params)
