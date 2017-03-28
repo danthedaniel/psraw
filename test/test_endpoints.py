@@ -3,7 +3,7 @@ import psraw
 import vcr
 import os
 import types
-from psraw.endpoints import LIMIT_MAX, ENDPOINTS
+from psraw.endpoints import ENDPOINTS
 
 
 LIMIT = 10
@@ -40,7 +40,8 @@ def test_comment_search():
 @vcr.use_cassette('test/cassettes/comment_search_large.yaml')
 def test_comment_search_2():
     """comment_search returns a list of praw.models.Comment objects"""
-    large_limit = LIMIT_MAX * 2
+    comment_search_limit = ENDPOINTS['comment_search']['limit']
+    large_limit = comment_search_limit * 2
     comments = psraw.comment_search(r, q='automoderator', limit=large_limit)
     assert isinstance(comments, types.GeneratorType)
     assert len(list(comments)) == large_limit

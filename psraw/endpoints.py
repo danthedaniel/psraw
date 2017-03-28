@@ -11,7 +11,6 @@ def sort_type(value):
         raise ValueError('Value must be one of: {}'.format(directions))
 
 
-LIMIT_MAX = 500
 LIMIT_DEFAULT = 50
 BASE_ADDRESS = 'https://apiv2.pushshift.io/reddit'
 ENDPOINTS = {
@@ -24,6 +23,7 @@ ENDPOINTS = {
             'sort': sort_type,
             'subreddit': str
         },
+        'limit': 500,
         'return_type': praw.models.Comment,
         'url': '/comment/fetch/'
     },
@@ -36,6 +36,7 @@ ENDPOINTS = {
             'sort': sort_type,
             'subreddit': str
         },
+        'limit': 500,
         'return_type': praw.models.Comment,
         'url': '/search/comment/'
     },
@@ -45,6 +46,7 @@ ENDPOINTS = {
             'before': int,
             'limit': int
         },
+        'limit': 250,
         'return_type': praw.models.Submission,
         'url': '/submission/activity/'
     },
@@ -57,6 +59,7 @@ ENDPOINTS = {
             'sort': sort_type,
             'subreddit': str
         },
+        'limit': 250,
         'return_type': praw.models.Submission,
         'url': '/search/submission/'
     }
