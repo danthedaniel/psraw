@@ -8,8 +8,8 @@ from psraw.endpoints import ENDPOINTS
 
 LIMIT = 10
 r = praw.Reddit(
-    client_id='BfP08bO63oqXEA',
-    client_secret='ofMkrQESZ2bC9Qi2S9V5bBhyZMA',
+    client_id=os.environ['CLIENT_ID'],
+    client_secret=os.environ['CLIENT_SECRET'],
     user_agent='psraw v{} nosetests'.format(psraw.__version__)
 )
 
