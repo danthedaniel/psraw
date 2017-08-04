@@ -48,7 +48,7 @@ def test_submission_search():
 
 
 @vcr.use_cassette('test/cassettes/submission_search_large.yaml')
-def test_submission_search():
+def test_submission_search_2():
     """submission_search raises ValueError with large limits in desc sort"""
     submission_search_limit = ENDPOINTS['submission_search']['limit']
     large_limit = submission_search_limit * 2
