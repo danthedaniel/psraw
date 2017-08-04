@@ -38,7 +38,7 @@ for comment in psraw.comment_search(r, q='teaearlgraycold', limit=3000):
 
 ### Available functions
 
-[Official Documentation](https://docs.google.com/document/d/171VdjT-QKJi6ul9xYJ4kmiHeC7t_3G31Ce8eozKp3VQ/edit)
+[Official Documentation](https://docs.google.com/document/d/171VdjT-QKJi6ul9xYJ4kmiHeC7t_3G31Ce8eozKp3VQ/edit) *out of date*
 
 In the example function signatures below, `r` is a `praw.Reddit` session object.
 **All other arguments must be passed as keyword arguments.**
@@ -51,16 +51,5 @@ psraw.comment_search(r, q='', subreddit='', limit=0, sort='asc', after=0, before
 ```
 
 ```python
-psraw.comment_fetch(r, author='', subreddit='', limit=0, sort='asc', after=0, before=0)
+psraw.submission_search(r, q='', subreddit='', limit=0, sort='asc', after=0)
 ```
-
-```python
-psraw.submission_search(r, q='', subreddit='', limit=0, sort='asc', after=0, before=0)
-```
-
-```python
-psraw.submission_activity(r, limit=0, after=0, before=0)
-```
-
-**Take note that the `submission_activity` endpoint is prone to slow processing
-times and high failure rates.**

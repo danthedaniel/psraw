@@ -76,9 +76,16 @@ def create_endpoint_function(name, config):
             if len(data) < limit:
                 raise StopIteration
 
-            # On subsequent requests, specify that we only want results from
-            # before or after the last item we were sent
-            coerced_kwargs[direction] = data[-1]['created_utc']
+            if direction in config['params']:
+                # On subsequent requests, specify that we only want results from
+                # before or after the last item we were sent
+                coerced_kwargs[direction] = data[-1]['created_utc']
+            elif int(kwargs['limit']) > config['limit']:
+                raise ValueError(
+                    'Can not perform requests of > {} because this endpoint can'
+                    'not specify the {} query parameter.'.
+                    format(config['limit'], direction)
+                )
 
     endpoint_func.__name__ = name
     return endpoint_func
